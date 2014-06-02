@@ -1,0 +1,12 @@
+header, footer, aside, nav {
+  background-color: orange;
+}
+
+html {
+  font-size: 14px;
+  font-family: Helvetica;
+}
+
+header, footer {
+  text-align: center;
+}
