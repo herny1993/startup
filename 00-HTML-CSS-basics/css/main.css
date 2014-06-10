@@ -74,12 +74,12 @@ body {
 
 .navigation ul li {
   font-size: 20px;
-  margin: 10px;
+  margin: 5px;
 }
 
 .content {
   box-sizing: border-box;
-  width: 65%;
+  width: 60%;
 
   margin: 5px;
   
@@ -108,4 +108,10 @@ body {
 
 .footer {
   margin: 5px;
+}
+
+/* ---------- LAYOUT ---------- */
+
+.navigation, .content, .sidebar {
+  display: inline-block;
 }
