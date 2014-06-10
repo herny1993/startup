@@ -1,3 +1,5 @@
+/* ---------- RULES ---------- */
+
 header, footer, aside, nav {
   background-color: orange;
 }
@@ -10,6 +12,8 @@ html {
 header, footer {
   text-align: center;
 }
+
+/* ---------- SPECIFICITY ---------- */
 
 .header {
   font-size: 46px;
@@ -45,4 +49,63 @@ body {
 
 .oh-no-inline-styles {
   background: green !important;
+}
+
+/* ---------- BOX MODEL ---------- */
+
+.header {
+  margin: 5px;
+}
+
+.navigation {
+  box-sizing: border-box;
+  width: 15%;
+
+  margin: 5px;
+
+  padding: 10px;
+}
+
+.navigation ul {
+  list-style-type: none;
+  margin: 0px;
+  padding: 0px;
+}
+
+.navigation ul li {
+  font-size: 20px;
+  margin: 10px;
+}
+
+.content {
+  box-sizing: border-box;
+  width: 65%;
+
+  margin: 5px;
+  
+  border: 2px;
+  border-style: double;
+
+  padding-left: 25px;
+  padding-right: 20px;
+  padding-bottom: 10px;
+  padding-top: 10px;
+
+}
+
+.sidebar {
+  box-sizing: border-box;
+  font-size: 20px;
+  text-align: center;
+  color: lightblue;
+  background-color: grey;
+  width: 20%;
+
+  margin: 5px;
+
+  padding: 10px;
+}
+
+.footer {
+  margin: 5px;
 }
