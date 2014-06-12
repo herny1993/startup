@@ -3,12 +3,12 @@ var Movie = function() {
   var attributes = {};
 
   // Methods
-  this.play = function(){
-    console.log("Playing");
+  this.play = function(){   
+    $(this).trigger("playing");
   }
 
   this.stop = function(){
-    console.log("Stopped");
+    $(this).trigger("stopped");
   }
 
   this.set = function(attr, value){
@@ -20,5 +20,20 @@ var Movie = function() {
   }
 }
 
+var MovieObserver = function(movie){
+  $(movie).on("playing", function(){
+    console.log("Playing " + this.get("title") + " from MovieObserver");
+  });
+
+  $(movie).on("stopped", function(){
+    console.log("Stopped " + this.get("title") + " from MovieObserver");
+  });
+}
+
 var titanic = new Movie();
-titanic.play();
+var titanicObserver = new MovieObserver(titanic);
+
+$(document).ready(function(){
+  titanic.set("title", "Titanic");
+  titanic.play();
+});
