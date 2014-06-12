@@ -1,24 +1,29 @@
-var Movie = function() {
+var Movie = (function(){
   // Attributes
   var attributes = {};
 
+  // Constructor
+  function Movie() {}
+
   // Methods
-  this.play = function(){   
+  Movie.prototype.play = function(){   
     $(this).trigger("playing");
   }
 
-  this.stop = function(){
+  Movie.prototype.stop = function(){
     $(this).trigger("stopped");
   }
 
-  this.set = function(attr, value){
+  Movie.prototype.set = function(attr, value){
     attributes[attr] = value;
   }
 
-  this.get = function(attr){
+  Movie.prototype.get = function(attr){
     return attributes[attr];
   }
-}
+
+  return Movie;
+})();
 
 var MovieObserver = function(movie){
   $(movie).on("playing", function(){
