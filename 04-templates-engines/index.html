@@ -28,9 +28,11 @@
             <h3> Experience of {{name}} </h3>            
             <p> <b> Actual: </b> {{actual}} </p>
             <p> <b> Previous: </b></p>
+            <ul class="user_experience">
             {{#each experience}}
-              <p> * {{position}} at {{company}} </p>
+              <li> {{position}} at {{company}} </li>
             {{/each}}
+            </ul>
             <p> <b> Education: </b> {{education}} </p>
           </section>
           <footer class="footer"> {{footer}} </footer>  
