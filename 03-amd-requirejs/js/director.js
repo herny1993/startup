@@ -10,7 +10,7 @@ define(['multimedia'], function(multimedia) {
 	    }
 
 	    this.speak = function(){
-	      console.log("Quotes of " + name + ":");
+	      console.log(name + " says:");
 	      for (var q in quotes){
 	        console.log(" - \"" + quotes[q] + "\"");
 	      }
