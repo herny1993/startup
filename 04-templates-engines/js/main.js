@@ -10,10 +10,12 @@ $(document).ready(function(){
 		 name: "Sheldon Cheng",
 		 work: "Design Verification Engineer",
 		 actual: "Design Verification Engineer at Samsung Austin R&D Center",
-		 previous: "Field Application Engineer at Qualcomm",
+		 experience: [{position: "Field Application Engineer", company: "Qualcomm"}, 
+		 			{position: "Verification Engineer", company: "Freescale Semiconductor"}, 
+		 			{position: "Member of Technical Staff", company:"Obsidian Software"}],
 		 education: "University of Michigan",
 		 footer: "Copyright 2014. All rights reserved"}
-		 
+
 	var html = template(context);
 
 	var target = $("#entry");

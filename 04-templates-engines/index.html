@@ -25,11 +25,13 @@
           <section class="content">
             <h2> Profile of {{name}} </h2>
             <p> {{work}} </p>
-            <p> Actual: {{actual}} </p>
-            <p> Previous: {{previous}} </p>
-            <p> Education: {{education}} </p>
-            <h3> Experience of {{name}} </h3>
-            <p> {{experience}} </p>
+            <h3> Experience of {{name}} </h3>            
+            <p> <b> Actual: </b> {{actual}} </p>
+            <p> <b> Previous: </b></p>
+            {{#each experience}}
+              <p> * {{position}} at {{company}} </p>
+            {{/each}}
+            <p> <b> Education: </b> {{education}} </p>
           </section>
           <footer class="footer"> {{footer}} </footer>  
         </script>
