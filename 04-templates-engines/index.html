@@ -18,10 +18,19 @@
 
     </head>
     <body>
-        <p id="intro"> Hello {name}! You have {count} new messages. </p>
+        <p id="intro"> </p>
         <div id="entry"></div>
         <script id="entry-template" type="text/x-handlebars-template">
           <header class="header"> {{title}} </header>
+          <section class="content">
+            <h2> Profile of {{name}} </h2>
+            <p> {{work}} </p>
+            <p> Actual: {{actual}} </p>
+            <p> Previous: {{previous}} </p>
+            <p> Education: {{education}} </p>
+            <h3> Experience of {{name}} </h3>
+            <p> {{experience}} </p>
+          </section>
           <footer class="footer"> {{footer}} </footer>  
         </script>
     </body>

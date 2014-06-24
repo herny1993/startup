@@ -5,7 +5,15 @@ $(document).ready(function(){
 	var template = Handlebars.compile(source);
 
 	// Execution
-	var context = {title: "Template Engines", footer: "Copyright 2014. All rights reserved "}
+	var context = 
+		{title: "Template Engines", 
+		 name: "Sheldon Cheng",
+		 work: "Design Verification Engineer",
+		 actual: "Design Verification Engineer at Samsung Austin R&D Center",
+		 previous: "Field Application Engineer at Qualcomm",
+		 education: "University of Michigan",
+		 footer: "Copyright 2014. All rights reserved"}
+		 
 	var html = template(context);
 
 	var target = $("#entry");
