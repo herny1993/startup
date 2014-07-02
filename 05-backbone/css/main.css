@@ -1,0 +1,13 @@
+html {
+  background-color: lightgreen;
+}
+
+
+.header {
+  font-size: 40px;
+  color: blue;
+}
+
+.header, .footer {	
+  text-align: center;
+}
