@@ -1,6 +1,9 @@
 var Movie = require('movie');
 var Director = require('director');
 
+var _ = require('underscore');
+var Backbone = require('backbone');
+
 // Thor Movie for testing
 var thor = new Movie();
 thor.set("title", "Thor");
@@ -31,3 +34,13 @@ console.log(quote);
   </body>
 </html>
 */
+
+var EventManager = {};
+
+_.extend(EventManager, Backbone.Events);
+
+EventManager.on("alert", function(msg) {
+  console.log("Triggered '" + msg + "'");
+});
+
+EventManager.trigger("alert", "an event");
